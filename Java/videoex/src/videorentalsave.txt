@@ -1,0 +1,218 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+import java.util.Vector;
+
+public class VideoRentalShop {
+	private Vector <VideoRental> vecvdoRental = new Vector<VideoRental>();
+	private Vector <Video> vecVdo = new Vector<Video>();
+	private Vector <VideoTitle> vecVdoTt = new Vector<VideoTitle>();
+	private Vector <Member> vecMember = new Vector<Member>();
+
+/////////////////////////////////////////1. 대여////////////////////////////////////////////////////////////
+	public void rentalVideo() {
+		if(this.vecmem.isEmpty() || this.vecVdo.isEmpty)) {
+			System.out.println("고객이나 비디오 등록바람");
+			return;
+		}
+		int memSelect;                                             // ....1
+		int videoSelect;                                           // ....2
+		int rentalDay;                                             // ....3
+	
+	System.out.println("비디오 대여 모듈");
+		printMemberList();                                         // 1번
+		System.out.print("대여할 고객을 선택 바람 : ");
+		memSelect = new Scanner(System.in).nextlnt();
+
+		printVideoList();                                           // 2번
+		System.out.print("대여할 비디오를 선택 바람 : ");
+		while(true) {
+			videoSelect = new Scanner(System.in).nextlnt();
+			if(this.vecVdo.get(videoSelect).getIsRental() == true)
+				System.out.println("이미 대여된 비디오임");
+			else
+				break;
+		}
+		
+		System.out.print("대여 기간 입력 바람 : ");                 // 3번
+		rentalDay = new Scanner(System.in).nextlnt();
+		vecRental.add(new Rental(vecMem.get(memSelect), vecVdo.get(videoSelect), new Date(), rentalDay));//비디오 랜탈 백터에  추가
+		vecVdo.get(videoSelect).rented(vecMem.get(memSelect));
+		vecMem.get(memSelect).setPointUp();
+		if(vecMem.get(memSelect).getPoint() >= GradeStandard.GOLD)			vecMem.get(memSelect).setGrade(GoldGrade.getInstance());
+		else if(vecMem.get(memSelect).getPoint() >= GradeStandard.SILVER)	vecMem.get(memSelect).setGrade(SilverGrade.getInstance());
+		else if(vecMem.get(memSelect).getPoint() >= GradeStandard.BRONZE)	vecMem.get(memSelect).setGrade(BronzeGrade.getInstance());
+
+///////////////////////////////////////2. 반납/////////////////////////////////////////////////////////////////
+	public void returnVideo() {
+		if(this.vecRental.isEmpty() {
+			System.out.println("반납할 비디오 없음")
+			return;
+		}
+		int videoSelect;
+		this.printRentalList();
+		
+		System.out.print("반날할 비디오 선택 바람");
+		videoSelect = new Scanner(System.in).nextlnt();
+		for(int i=0; i<vecVdo.size(): i++) {
+			if(vecVdo.get(i).getCode(()(.equals(vecRental.get(videoSelect).getVideo().getCode())) {
+				vecVdo.get(i).returned();
+			}
+		}
+		vecRental.remove(videoSelect);
+		System.out.println("비디오 반납 완료");
+	}
+
+///////////////////////////////////// 3. 현황///////////////////////////////////////////////////////////////
+//////////////////////////////////// (1) 대여 현황 출력		
+	public void printRentalList() {
+		System.out.println("비디오 대여 현황");
+		for(int i=0; i<vecRental.size(); i++) {
+			System.out.print("'+i+". ");
+			System.out.print(vecRental.get(i).getDate().getYear()+"년");
+			System.out.print(vecRental.get(i).getDate().getMonth()+"월");
+			System.out.print(vecRental.get(i).getDate().getDay()+"일 ");
+			System.out.print(vecRental.get(i).getVideo().getCode()+" ");
+			System.out.print(VecRental.get(i).getVideo().getVideoTitle().getTitle()+" ");
+			System.out.print(vecRental.get(i).getVideo().getVideoTitle().getTitle()+" ");
+			System.out.print(vecRental.get(i).getVideo().getVideoTitle().getdirector()+" ");
+			if(vecVdo.get(i).getIsRental())			System.out.print("OUT ");
+			else									System.out.print("IN ");
+			if(vecVdo.get(i).getBorrower()==null)	System.out.print("	");
+			else									System.out.print(""+vecVdo.get(i).getborrower().getName());			  System.out.println();
+			System.out.println();
+		}
+	}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////// (2) 비디오 현황  출력
+	public void printVideoList() {
+		if(this.vecVdo.isEmpty() {
+				System.out.println("비디오 리스트 없음. 추가 바람")
+				return;
+			}
+			System.out.println("번호	코드	개봉년도	비디오제목	감독	대여여부	대여한사람")
+			for(int i=0; i<vecVdo.size(); i++) {
+				System.out.print(""+i+ ". ");
+				System.out.print(vecVdo.get(i).getCode()+" ");
+				System.out.print(vecVdo.get(i).getVideoTitle().getYear()+"");
+				System.out.print(vecVdo.get(i).getVideoTitle().getTitle()+" ");
+				System.out.print(vecVdo.get(i).getVidoTitle().getDirector()+" ";
+				if(vecVdo.get(i).getIsRental())			System.out.print("OUT ");
+				else									System.out.print("IN ");
+				if(vecVdo.get(i).getBorrower()==null) 	System.out.print(" ");
+				else									System.out.print(""+vecVdo.get(i).getborroewr().getName());
+				System.out.println();
+				}
+			}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////// (3) 비디오 타이틀 현황  출력
+		public void printVideoTitleList() {
+		if(this.vecVdoTt.isEmpty()) {
+			System.out.println("비디오 타이틀 없음. 추가 바람");
+			return;
+		}
+
+		System.out.println("번호	개봉년도	비디오제목	감독");
+
+		for(int i=0; i<vecVdoTt.size(); i++) {
+			System.out.print(""+i+ ". ");
+			System.out.print(vecVdoTt.get(i).getYear()+" ");
+			System.out.print(vecVdoTt.get(i).getTitle()+" ");
+			System.out.print(vecVdoTt.get(i).getDirector()+" ");
+			System.out.println();
+		}
+	}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////// (4) 맴버 현황 출력
+		public void printMemberList() {
+			if(this.vecMem.isEmpty()) {
+				System.out.println("등록된 맴버 없음. 추가 바람");
+				return;
+			}
+
+			System.out.println("번호	개봉년도	비디오제목	감독");
+			for(int i=0; i<vecVdoTt.size(); i++) {
+				System.out.print(""+i+". ");
+				System.out.print(vecMem.get(i).getId()+" ");
+				System.out.print(vecMem.get(i).getName()+" ");
+				System.out.print(vecMem.get(i).getPhoneNum()+" ");
+				System.out.print(vecMem.get(i).getPoint()+" ");
+				System.out.print(vecMem.get(i).getGrade().getStrGrade()+" ");
+				System.out.println();
+			}
+		}
+
+//////////////////////////////////////3. 추가///////////////////////////////////////////////////////////////////
+/////////////////////////////////// (1) 비디오 추가
+		public void addVideo() {
+			if(this.vecVdoTt.isEmpty() {
+					System.out.println("타이틀이 등록 되어있지 않습니다.")
+					return; // 비디오 추가는 비디오 타이틀 등록이 선행돼 있어야 함.
+			System.out.println("비디오 타이틀 리스트 출력");
+			this.printVideoTitleList();
+			System.out.print("비디오 번호를 선택 바람 : ");
+			
+			int select = new Scanner(System.in).nextInt();
+			boolean isAdd = vecVdo.add(new Video(vecVdoTt.get(select));
+			if(isAdd) 
+				System.out.println("비디오"+vecVdoTt.get(select).getTitle()+"가 추가됨");
+			else
+				System.out.println("비디오 추가 실패");
+			}
+///////////////////////////////////////////////////////////////////////////////////////////////////////// (2) 비디오 타이틀 추가
+			public void addVideoTitle() {
+				boolean isAdd = vecVdoTt.add(new VideoTitle();
+				if(isAdd) 
+					System.out.println("고객이 추가됨");
+				else
+					System.out.println("고객 추가 실패");
+				}
+/////////////////////////////////////////////////////////////////////////////////////////////////////// (3) 맴버 추가					
+		public void addMember() {
+			boolean isAdd = vecMem.add(new Member());
+			if(isAdd) 
+				System.out.println("고객 추가됨");
+			else
+				System.out.println("고객 추가 실패");
+		}
+//////////////////////////////////////////////////////////////////////////////////////////////////// 4. main
+		public static void main(String [] args) {
+			VideoRentalSop vrs = new VideoRentalShop();
+			Scanner sc = new Scanner(System.in);
+			int sltMenu = 0;
+
+			while(true) {
+				System.out.println("");
+				System.out.println("================비디오대여점=======================");
+				System.out.println("(1). 비디오 대여        (2). 비디오 반납");
+				System.out.println("(3). 비디오 리스트 출력 (4). 타이틀 리스트 출력");
+				System.out.println("(5). 비디오 대여 현황   (6). 고객 리스트 출력");
+				System.out.println("(7). 고객 추가          (8). 비디오 타이틀 추가 ");
+				System.out.println("(9). 비디오 추가        (0). 프로그램 종료");
+				System.out.print("*** 메뉴를 입력해주세요 *** : ");
+				try{
+					sltMenu = sc.nextInt();
+				}catch(InputMismatchException ime){
+					System.err.println("에러! 정수가 아닌 실수/문자를 입력하셨습니다.");
+				}
+				System.out.println("");
+			
+				switch(sltMenu){
+				case 1: vrs.rentalVideo(); break;
+				case 2: vrs.returnVideo(); break;
+				case 3: vrs.printVideoList(); break;
+				case 4: vrs.printVideoTitleList(); break;
+				case 5: vrs.printRentalList(); break;
+				case 6: vrs.printMemberList(); break;
+				case 7: vrs.addMember(); break;
+				case 8: vrs.addVideoTitle(); break;
+				case 9: vrs.addVideo(); break;
+				case 0: System.out.println("프로그램을 종료합니다...."); return;
+				default : System.out.println("잘못된 메뉴를 선택하셨습니다. 다시 선택해주세요.");
+				}
+			}
+		}
+	}
+
+
+
+
