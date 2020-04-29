@@ -15,6 +15,5 @@ public class SignOperatorExample_1 {
 		System.out.println("result3=" + result3);
 		
 		
-		
 	}
 }
