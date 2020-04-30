@@ -1,6 +1,6 @@
 package chapter7_inheritance;
 
-public class DmbCellPhoneExample {
+public class DmbCellPhoneExample_3 {
 
 	public static void main(String[] args) {
 		//DmbCellPhone 객체 생성
