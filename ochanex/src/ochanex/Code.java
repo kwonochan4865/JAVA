@@ -8,8 +8,7 @@ public class Code {
 	
 	public void setEnrollcode(String enrollcode) {
 		this.enrollcode = enrollcode;
-	}
-	
+	}	
 	public String getEnrollcode() {
 		return this.enrollcode;
 	}
