@@ -1,4 +1,4 @@
-package chapter10_exception;
+package chapter11_APIdocument;
 
 public class ClassExample_20 {
 	public static void main(String[] args) throws Exception {

@@ -1,7 +1,8 @@
 package ochanex;
+
 import java.util.Calendar;
-public class Date {
-	public Date() {
+public class Date2 {
+	public Date2() {
 		Calendar today = Calendar.getInstance();
 		int year = today.get(Calendar.YEAR);
 		int mon = today.get(Calendar.MONTH);

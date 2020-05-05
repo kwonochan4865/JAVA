@@ -1,4 +1,4 @@
-package chapter10_exception;
+package chapter11_APIdocument;
 
 public class ResourcePathiExample_21 {
 
@@ -11,7 +11,5 @@ public class ResourcePathiExample_21 {
 		System.out.println(photo1Path);
 		System.out.println(photo2Path);
 		
-		
-	}
-
+		} 
 }

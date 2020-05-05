@@ -1,78 +1,226 @@
 package ochanex;
-import java.util.*;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+import java.util.Vector;
 
-public class VideoRentalShop {
-	private Vector<Code> vecCode = new Vector<Code>();
+import BronzeGrade;
+import Date;
+import GoldGrade;
+import GradeStandard;
+import Member;
+import Rental;
+import SilverGrade;
+import Video;
+import VideoTitle;
+
+public class VideoRentalShop {//ºñµğ¿À ·»Å» ¼¥ Å¬·¡½º
 	private Vector<Member> vecMem = new Vector<Member>();
 	private Vector<Video> vecVdo = new Vector<Video>();
-////////////////////////////////////////////////////////////////////////////////
-//////////////////////////// (1) rentalVideo
-	public void rentalVideo() {
-		if(this.vecVdo.isEmpty()) {
-			System.out.println("ë¹„ë””ì˜¤ê°€ ë“±ë¡ë˜ì–´ ìˆì§€ ì•ŠìŠµë‹ˆë‹¤.");
+	private Vector<Rental> vecRental = new Vector<Rental>();
+	
+	public void rentalVideo(){//ºñµğ¿À ºô¸®±â ¸Ş¼Òµå
+		if(this.vecMem.isEmpty() || this.vecVdo.isEmpty()){
+			System.out.println("°í°´ÀÌ³ª ºñµğ¿À°¡ µî·ÏµÇ¾îÀÕÁö ¾Ê½À´Ï´Ù.");
 			return;
 		}
 		int memSelect;
+		int videoSelect;
+		int rentalDay;
+		System.out.println("ºñµğ¿À ´ë¿© ¸ğµâÀÔ´Ï´Ù.");
+		printMemberList();
+		System.out.print("´ë¿©ÇÒ °í°´À» ¼±ÅÃÇØ ÁÖ¼¼¿ä : ");
+		memSelect = new Scanner(System.in).nextInt();
 		
-			printMemberList();
-			System.out.print("ëŒ€ì—¬í•  ê³ ê°ì„ ì„ íƒí•´ ì£¼ì„¸ìš” : ");
-			memSelect = new Scanner(System.in).nextInt();
+		printVideoList();
+		
+		System.out.print("´ë¿©ÇÒ ºñµğ¿À¸¦ ¼±ÅÃÇØ ÁÖ¼¼¿ä : ");
+		
+		while(true){//¼±ÅÃÇÑ ºñµğ¿À°¡ ´ë¿©µÇ¾úÀ¸¸é °æ°í¹® Ãâ·Â ¾Æ´Ï¸é ·çÇÁ Å»Ãâ
+			videoSelect = new Scanner(System.in).nextInt();
+			if(this.vecVdo.get(videoSelect).getIsRental() == true)
+				System.out.println("ÀÌ¹Ì ´ë¿©µÈ ºñµğ¿ÀÀÔ´Ï´Ù.");
+			else
+				break;
 		}
-
+		
+		System.out.print("´ë¿©ÇÒ ±â°£À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä : ");
+		rentalDay = new Scanner(System.in).nextInt();
+		
+		vecRental.add(new Rental(vecMem.get(memSelect), vecVdo.get(videoSelect), new Date(), rentalDay));//ºñµğ¿À ·£Å» ¹éÅÍ¿¡  Ãß°¡
+		vecVdo.get(videoSelect).rented(vecMem.get(memSelect));
+		vecMem.get(memSelect).setPointUp();
+		
+		if(vecMem.get(memSelect).getPoint() >= GradeStandard.GOLD)			vecMem.get(memSelect).setGrade(GoldGrade.getInstance());
+		else if(vecMem.get(memSelect).getPoint() >= GradeStandard.SILVER)	vecMem.get(memSelect).setGrade(SilverGrade.getInstance());
+		else if(vecMem.get(memSelect).getPoint() >= GradeStandard.BRONZE)	vecMem.get(memSelect).setGrade(BronzeGrade.getInstance());
+		
+	}
 	
-////////////////////////////////////////////////////////////////////////////////
-///////////////////////////// (2) return
-	public void returnVideo() {
-		if(this.vecRental.isEmpty()) {
-			System.out.println("ë°˜ë‚©í•  ë¹„ë””ì˜¤ê°€ ì—†ìŒ");
+	public void returnVideo(){//ºñµğ¿À ¹İ³³ ¸Ş¼Òµå
+		if(this.vecRental.isEmpty()){
+			System.out.println("¹İ³³ÇÒ ºñµğ¿À°¡ ¾ø½À´Ï´Ù.");
 			return;
 		}
+		
 		int videoSelect;
 		this.printRentalList();
+		System.out.print("¹İ³³ÇÒ ºñµğ¿À¸¦ ¼±ÅÃÇØ ÁÖ¼¼¿ä : ");
+		videoSelect = new Scanner(System.in).nextInt();
 		
+		for(int i = 0; i<vecVdo.size(); i++){
+			if(vecVdo.get(i).getCode().equals(vecRental.get(videoSelect).getVideo().getCode())){
+				vecVdo.get(i).returned();
+			}
+		}		
+		vecRental.remove(videoSelect);
+		System.out.println("ºñµğ¿À°¡ ¹İ³³µÇ¾ú½À´Ï´Ù.");
 	}
-	public static void main(String[] args) {
-//	System.out.println("                           ");
-//	System.out.println("                           ");
-//	System.out.println("             " + "ëŒ€ì—¬/ë°˜ë‚©");
-//	System.out.println("        " + "(Enterë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”)");
-//	System.out.println("                           ");
-//	System.out.println("                           ");
+	
+	public void printRentalList(){
+		System.out.println("ºñµğ¿À ´ë¿© ÇöÈ²ÀÔ´Ï´Ù.");
+		for(int i=0; i<vecRental.size(); i++){
+			System.out.print(""+i+ ". ");
+			System.out.print(vecRental.get(i).getDate().getYear()+"³â ");
+			System.out.print(vecRental.get(i).getDate().getMonth()+"¿ù ");
+			System.out.print(vecRental.get(i).getDate().getDay()+"ÀÏ ");
+			System.out.print(vecRental.get(i).getVideo().getCode()+" ");
+			System.out.print(vecRental.get(i).getVideo().getVideoTitle().getTitle()+" ");
+			System.out.print(vecRental.get(i).getVideo().getVideoTitle().getDirector()+" ");
+			if(vecVdo.get(i).getIsRental())			System.out.print("OUT  ");
+			else						   			System.out.print("IN ");
+			if(vecVdo.get(i).getBorrower()==null)	System.out.print("  ");
+			else									System.out.print(""+vecVdo.get(i).getBorrower().getName());			System.out.println();
+			System.out.println();
+		}
+	}
+	
+	
+	public void addMember(){
+		boolean isAdd = vecMem.add(new Member());
+		if(isAdd)
+			System.out.println("°í°´ÀÌ Ãß°¡µÇ¾ú½À´Ï´Ù.");
+		else
+			System.out.println("°í°´ Ãß°¡¸¦ ½ÇÆĞÇß½À´Ï´Ù.");
+	}
+	
+	public void addVideoTitle(){
+		boolean isAdd = vecVdoTt.add(new VideoTitle());
+		if(isAdd)
+			System.out.println("ºñµğ¿À Å¸ÀÌÆ²ÀÌ Ãß°¡µÇ¾ú½À´Ï´Ù.");
+		else
+			System.out.println("ºñµğ¿À Å¸ÀÌÆ² Ãß°¡¸¦ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
+	}
+	
+	public void addVideo(){
+		if(this.vecVdoTt.isEmpty()){
+			System.out.println("Å¸ÀÌÆ²ÀÌ µî·ÏµÇ¾îÀÖÁö ¾Ê½À´Ï´Ù.");
+			return;
+		}
+		
+		System.out.println("ºñµğ¿À Å¸ÀÌÆ² ¸®½ºÆ®¸¦ Ãâ·ÂÇÕ´Ï´Ù.");
+		this.printVideoTitleList();
+		System.out.print("ºñµğ¿À ¹øÈ£¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä :");
+		
+		int select = new Scanner(System.in).nextInt();
+		boolean isAdd = vecVdo.add(new Video(vecVdoTt.get(select)));
+		if(isAdd)
+			System.out.println("ºñµğ¿À"+vecVdoTt.get(select).getTitle()+"°¡ Ãß°¡µÇ¾ú½À´Ï´Ù.");
+		else
+			System.out.println("ºñµğ¿À Ãß°¡¸¦ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
+	}
+	
+	public void printMemberList(){
+		if(this.vecMem.isEmpty()){
+			System.out.println("µî·ÏµÈ ¸É¹ö°¡ ¾ø½À´Ï´Ù. ¸É¹ö¸¦ Ãß°¡ÇØÁÖ¼¼¿ä.");
+			return;
+		}
+		
+		System.out.println("¹øÈ£  ¾ÆÀÌµğ  ÀÌ¸§  ÇÚµåÆù¹øÈ£  Æ÷ÀÎÆ®  È¸¿øµî±Ş");
+		
+		for(int i=0; i<vecMem.size(); i++){
+			System.out.print(""+i+ ". ");
+			System.out.print(vecMem.get(i).getId()+" ");
+			System.out.print(vecMem.get(i).getName()+" ");
+			System.out.print(vecMem.get(i).getPhoneNum()+" ");
+			System.out.print(vecMem.get(i).getPoint()+" ");
+			System.out.print(vecMem.get(i).getGrade().getStrGrade()+" ");
+			System.out.println();
+		}
+	}
+		
+	public void printVideoTitleList(){
+		if(this.vecVdoTt.isEmpty()){
+			System.out.println("ºñµğ¿À Å¸ÀÌÆ²ÀÌ ºñ¾ú½À´Ï´Ù. ºñµğ¿À Å¸ÀÌÆ²À» Ãß°¡ÇØÁÖ¼¼¿ä.");
+			return;
+		}
+		
+		System.out.println("¹øÈ£  °³ºÀ³âµµ  ºñµğ¿ÀÁ¦¸ñ  °¨µ¶");
+		
+		for(int i=0; i<vecVdoTt.size(); i++){
+			System.out.print(""+i+ ". ");
+			System.out.print(vecVdoTt.get(i).getYear()+" ");
+			System.out.print(vecVdoTt.get(i).getTitle()+" ");
+			System.out.print(vecVdoTt.get(i).getDirector()+" ");
+			System.out.println();
+		}	
+	}
+	
+	public void printVideoList(){
+		if(this.vecVdo.isEmpty()){
+			System.out.println("ºñµğ¿À ¸®½ºÆ®°¡ ºñ¾ú½À´Ï´Ù. ºñµğ¿À¸¦ Ãß°¡ÇØÁÖ¼¼¿ä.");
+			return;
+		}
+		System.out.println("¹øÈ£  ÄÚµå   °³ºÀ³âµµ    ºñµğ¿ÀÁ¦¸ñ   °¨µ¶   ´ë¿©¿©ºÎ   ´ë¿©ÇÑ»ç¶÷");
+		for(int i=0; i<vecVdo.size(); i++){
+			System.out.print(""+i+ ". ");
+			System.out.print(vecVdo.get(i).getCode()+" ");
+			System.out.print(vecVdo.get(i).getVideoTitle().getYear()+" ");
+			System.out.print(vecVdo.get(i).getVideoTitle().getTitle()+" ");
+			System.out.print(vecVdo.get(i).getVideoTitle().getDirector()+" ");
+			if(vecVdo.get(i).getIsRental())			System.out.print("OUT  ");
+			else						   			System.out.print("IN ");
+			if(vecVdo.get(i).getBorrower()==null)	System.out.print("  ");
+			else									System.out.print(""+vecVdo.get(i).getBorrower().getName());
+			System.out.println();
+			}
+	}
+	
+	
+	
+	public static void main(String[] args){
 		VideoRentalShop vrs = new VideoRentalShop();
-	System.out.println(" ëŒ€ì—¬/ë°˜ë‚©ì€ 1ë²ˆ | í˜„í™© ì¶œë ¥ 2ë²ˆ  | ì¶”ê°€ëŠ” 3ë²ˆì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
-
-		 int uiinput = new Scanner(System.in).nextInt();
-
-		 if(uiinput == 1) {
-			 System.out.println("(1). ëŒ€ì—¬ ì—¬ë¶€         (2). ë¹„ë””ì˜¤ ë“±ë¡ í˜„í™©");
-			 System.out.println("(3). ì½”ë“œ ë“±ë¡ í˜„í™©     (4). ë§´ë²„ í˜„í™© ");
-			 int presentinput = new Scanner(System.in).nextInt();
-			 switch(presentinput) {
-			 case 1: vrs.printRentalList(); break;
-			 case 2: vrs.printVideoList(); break;
-			 case 3: vrs.printCodeList(); break;
-			 case 4: vrs.printMemberList(); break;
-			 }
- 
-		 	}
- 
- 
-		 if(uiinput == 2) {
-			 System.out.println("(1). ë¹„ë””ì˜¤ ì¶”ê°€         (2). ë§´ë²„ ì¶”ê°€ ");
-			 System.out.println("(3). ì½”ë“œ ì¶”ê°€");
-			int sltMenu = new Scanner(System.in).nextInt();
-				if(sltMenu == 1) {
-					vrs.addVideo(); break;
-				if(sltMenu == 2) {
-					vrs.addMember(); break;
-				}
-				}
-		 	}
- 
- 
-		 else
-			 System.out.println("1ë²ˆ, 2ë²ˆ ë˜ëŠ” 3ë²ˆì„ ëˆŒëŸ¬ì£¼ì„¸ìš”");
-		 	 return;
+		Scanner sc = new Scanner(System.in);
+		int sltMenu = 0;
+		
+		while(true){
+			System.out.println("");
+			System.out.println("================ºñµğ¿À´ë¿©Á¡=======================");
+			System.out.println("(1). ºñµğ¿À ´ë¿©        (2). ºñµğ¿À ¹İ³³");
+			System.out.println("(3). ºñµğ¿À ¸®½ºÆ® Ãâ·Â (4). Å¸ÀÌÆ² ¸®½ºÆ® Ãâ·Â");
+			System.out.println("(5). ºñµğ¿À ´ë¿© ÇöÈ²   (6). °í°´ ¸®½ºÆ® Ãâ·Â");
+			System.out.println("(7). °í°´ Ãß°¡          (8). ºñµğ¿À Å¸ÀÌÆ² Ãß°¡ ");
+			System.out.println("(9). ºñµğ¿À Ãß°¡        (0). ÇÁ·Î±×·¥ Á¾·á");
+			System.out.print("*** ¸Ş´º¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä *** : ");
+			try{
+				sltMenu = sc.nextInt();
+			}catch(InputMismatchException ime){
+				System.err.println("¿¡·¯! Á¤¼ö°¡ ¾Æ´Ñ ½Ç¼ö/¹®ÀÚ¸¦ ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+			}
+			System.out.println("");
+			
+			switch(sltMenu){
+			case 1: vrs.rentalVideo(); break;
+			case 2: vrs.returnVideo(); break;
+			case 3: vrs.printVideoList(); break;
+			case 4: vrs.printVideoTitleList(); break;
+			case 5: vrs.printRentalList(); break;
+			case 6: vrs.printMemberList(); break;
+			case 7: vrs.addMember(); break;
+			case 8: vrs.addVideoTitle(); break;
+			case 9: vrs.addVideo(); break;
+			case 0: System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù...."); return;
+			default : System.out.println("Àß¸øµÈ ¸Ş´º¸¦ ¼±ÅÃÇÏ¼Ì½À´Ï´Ù. ´Ù½Ã ¼±ÅÃÇØÁÖ¼¼¿ä.");
+			}
+		}
 	}
-} 
-
+}

@@ -1,4 +1,4 @@
-package chapter10_exception;
+package chapter11_APIdocument;
 
 public class Member_9 {
 	public String id;

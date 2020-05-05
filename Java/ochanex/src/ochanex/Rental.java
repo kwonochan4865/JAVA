@@ -1,7 +1,5 @@
-package exex;
-
-
-public class Rental {//ï¿½ë¿© Å¬ï¿½ï¿½ï¿½ï¿½
+package ochanex;
+public class Rental {//´ë¿© Å¬·¡½º
 	private Member member;
 	private Video video;
 	private Date date;

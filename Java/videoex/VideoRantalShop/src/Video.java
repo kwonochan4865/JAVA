@@ -16,11 +16,11 @@ public class Video {//���� Ŭ����
 		this.vdoTt = vdoTt;		
 		
 		try {
-		System.out.print("���� �ڵ带 �Է��ϼ��� : ");
+		System.out.print("input the Video code");
 			code = in.readLine();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			System.err.print("���� ������ ����");
+			System.err.print("error the generate video");
 			e.printStackTrace();
 		}		
 		this.isRantal = false;
