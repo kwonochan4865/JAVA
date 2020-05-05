@@ -2,9 +2,7 @@ package ochanex;
 
 public class Code {
 
-	private String enrollcode; 
-	
-	
+	private String enrollcode; 	
 	
 	public void setEnrollcode(String enrollcode) {
 		this.enrollcode = enrollcode;
