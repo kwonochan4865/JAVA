@@ -1,17 +1,17 @@
 import java.util.Scanner;
 
-public class Date {//³¯Â¥ Å¬·¹½º
+public class Date {//ë‚ ì§œ í´ë ˆìŠ¤
 	private int year;
 	private int month;
 	private int day;
 	private Scanner sc = new Scanner(System.in);
 	
 	public Date(){
-		System.out.print("ÇöÁ¦ ³âµµ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("í˜„ì œ ë…„ë„ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		year = sc.nextInt();
-		System.out.print("ÇöÁ¦ ´ŞÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("í˜„ì œ ë‹¬ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 		month = sc.nextInt();
-		System.out.print("ÇöÁ¦ ³¯Â¥¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("í˜„ì œ ë‚ ì§œë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		day = sc.nextInt();		
 	}
 	

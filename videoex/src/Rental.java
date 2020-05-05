@@ -1,4 +1,4 @@
-public class Rental {//´ë¿© Å¬·¡½º
+public class Rental {//ëŒ€ì—¬ í´ë˜ìŠ¤
 	private Member member;
 	private Video video;
 	private Date date;

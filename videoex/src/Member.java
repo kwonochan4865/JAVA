@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Vector;
 
-public class Member { // °í°´ Å¬·¡½º
+public class Member { // ê³ ê° í´ë˜ìŠ¤
 	private String id;
 	private String name;
 	private String phoneNum;
@@ -19,12 +19,12 @@ public class Member { // °í°´ Å¬·¡½º
 	public void setMember(){
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		try {
-			System.out.println("»õ·Î¿î ¸É¹ö¸¦ Ãß°¡ÇÕ´Ï´Ù.");
-			System.out.print("°í°´ÀÇ ¾ÆÀÌµğ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+			System.out.println("ìƒˆë¡œìš´ ë§´ë²„ë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.");
+			System.out.print("ê³ ê°ì˜ ì•„ì´ë””ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
 			this.id = in.readLine();
-			System.out.print("°í°´ÀÇ ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+			System.out.print("ê³ ê°ì˜ ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
 			this.name = in.readLine();
-			System.out.print("°í°´ÀÇ ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+			System.out.print("ê³ ê°ì˜ ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
 			this.phoneNum = in.readLine();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -36,7 +36,7 @@ public class Member { // °í°´ Å¬·¡½º
 	
 	public void setPointUp(){
 		this.point+=10;
-		System.out.println(this.name+"´ÔÀÇ Æ÷ÀÎÆ®°¡ 10 Áõ°¡Çß½À´Ï´Ù.");
+		System.out.println(this.name+"ë‹˜ì˜ í¬ì¸íŠ¸ê°€ 10 ì¦ê°€í–ˆìŠµë‹ˆë‹¤.");
 	}	
 
 	
@@ -45,7 +45,7 @@ public class Member { // °í°´ Å¬·¡½º
 	}
 	
 	
-	///////////////////////////////MemberÅ¬·¹½º seter geter /////////////////////////////////////
+	///////////////////////////////Memberí´ë ˆìŠ¤ seter geter /////////////////////////////////////
 	
 	public void setId(String id){
 		this.id = id;
@@ -91,13 +91,13 @@ public class Member { // °í°´ Å¬·¡½º
 }
 
 
-abstract class Grade{// Grade Ãß»ó Å¬·¡½º ±³¼ö´ÔÀÌ ¸»¾¸ÇÏ½Å µüµü µû´Ù´Ú Àû¿ë
+abstract class Grade{// Grade ì¶”ìƒ í´ë˜ìŠ¤ êµìˆ˜ë‹˜ì´ ë§ì”€í•˜ì‹  ë”±ë”± ë”°ë‹¤ë‹¥ ì ìš©
 	public abstract int calcRentalFee();
 	public abstract String getStrGrade();
 }
 
 
-class GoldGrade extends Grade{//GoldGrade Å¬·¡½º Grade »ó¼Ó
+class GoldGrade extends Grade{//GoldGrade í´ë˜ìŠ¤ Grade ìƒì†
 	private int rentalFee = 700;
 	private String strGrade = "Gold";
 	private static GoldGrade instance;
@@ -118,7 +118,7 @@ class GoldGrade extends Grade{//GoldGrade Å¬·¡½º Grade »ó¼Ó
 	}
 }
 
-class SilverGrade extends Grade{//SilverGrade Å¬·¡½º Grade »ó¼Ó
+class SilverGrade extends Grade{//SilverGrade í´ë˜ìŠ¤ Grade ìƒì†
 	private int rentalFee = 1000;
 	private String strGrade = "Silver";
 	private static SilverGrade instance;
@@ -139,7 +139,7 @@ class SilverGrade extends Grade{//SilverGrade Å¬·¡½º Grade »ó¼Ó
 	}
 }
 
-class BronzeGrade extends Grade{//BronzeGrade Å¬·¡½º Grade »ó¼Ó
+class BronzeGrade extends Grade{//BronzeGrade í´ë˜ìŠ¤ Grade ìƒì†
 	private int rentalFee = 1200;
 	private String strGrade = "Bronze";
 	private static BronzeGrade instance;

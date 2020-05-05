@@ -13,18 +13,18 @@ public class VideoTitle {
 		this.setVideoTitle();
 	}
 	
-	public void setVideoTitle(){//ºñµğ¿À Å¸ÀÌÆ² »ı¼ºÀÚ
+	public void setVideoTitle(){//ë¹„ë””ì˜¤ íƒ€ì´í‹€ ìƒì„±ì
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		try {
-			System.out.print("ºñµğ¿À °³ºÀ ³âµµ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+			System.out.print("ë¹„ë””ì˜¤ ê°œë´‰ ë…„ë„ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 			year = in.readLine();
-			System.out.print("ºñµğ¿À Á¦¸ñÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+			System.out.print("ë¹„ë””ì˜¤ ì œëª©ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 			title = in.readLine();
-			System.out.print("ºñµğ¿À °¨µ¶À» ÀÔ·ÂÇÏ¼¼¿ä : ");
+			System.out.print("ë¹„ë””ì˜¤ ê°ë…ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 			director = in.readLine();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			System.err.print("ºñµğ¿À »ı¼ºÁß ¿À·ù");
+			System.err.print("ë¹„ë””ì˜¤ ìƒì„±ì¤‘ ì˜¤ë¥˜");
 			e.printStackTrace();
 		}		
 	}

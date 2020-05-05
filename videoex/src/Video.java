@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-public class Video {//���� Ŭ����
+public class Video {
 	private String code;
 	private VideoTitle vdoTt;
 	private boolean isRantal;
