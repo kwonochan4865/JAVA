@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class ByteOperationExample_13 {
+public class ByteOperationExample13 {
 
 	public static void main(String[] args) {
 		byte result1 = 10 + 20;  //변수 선언이 필요없다면 자원 절약을 위해 ...

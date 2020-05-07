@@ -1,9 +1,9 @@
 package chapter6.classexample;
 
-public class CarExample_45 {
+public class CarExample45 {
 
 	public static void main(String[] args) {
-		Car_44 myCar = new Car_44();
+		Car44 myCar = new Car44();
 		
 		//잘못된 속도 변경
 		myCar.setSpeed(-50);

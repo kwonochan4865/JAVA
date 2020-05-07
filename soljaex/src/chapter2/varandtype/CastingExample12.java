@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class CastingExample_12 {
+public class CastingExample12 {
 
 	public static void main(String[] args) {
 		int intValue = 44032;

@@ -1,6 +1,6 @@
 package chapter10.exception;
 
-public class ClassCastExceptionExample_4 {
+public class ClassCastExceptionExample4 {
 
 	public static void main(String[] args) {
 		Dog dog = new Dog();

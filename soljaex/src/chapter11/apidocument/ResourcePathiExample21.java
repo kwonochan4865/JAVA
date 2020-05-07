@@ -2,7 +2,7 @@ package chapter11.apidocument;
 
 import chapter10.exception.Car;
 
-public class ResourcePathiExample_21 {
+public class ResourcePathiExample21 {
 
 	public static void main(String[] args) {
 		Class clazz = Car.class;

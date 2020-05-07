@@ -1,7 +1,7 @@
 package chapter8.interfaceex;
 
-public class Driver_16 {
-	public void drive(Vehicle_17 vehicle) {
+public class Driver16 {
+	public void drive(Vehicle17 vehicle) {
 		vehicle.run();
 	}
 }

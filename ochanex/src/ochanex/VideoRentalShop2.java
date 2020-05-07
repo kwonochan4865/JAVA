@@ -16,6 +16,7 @@ public class VideoRentalShop2 {
 		}
 		int memSelect;
 
+		
 		printMemberList();
 		System.out.print("대여할 고객을 선택해 주세요 : ");
 		memSelect = new Scanner(System.in).nextInt();

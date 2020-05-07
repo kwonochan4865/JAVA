@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class BooleanExample_10 {
+public class BooleanExample10 {
 
 	public static void main(String[] args) {
 		boolean stop = true;

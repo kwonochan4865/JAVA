@@ -1,6 +1,6 @@
 package chapter10.exception;
 
-public class TryCatchFinallyRuntimeExceptionExample_5 {
+public class TryCatchFinallyRuntimeExceptionExample5 {
 
 	public static void main(String[] args) {
 		String data1 = null;

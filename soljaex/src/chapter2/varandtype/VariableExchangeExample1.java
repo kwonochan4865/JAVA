@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class VariableExchangeExample_1 {
+public class VariableExchangeExample1 {
 	public static void main(String[] args) {
 		int x = 3;
 		int y = 5;

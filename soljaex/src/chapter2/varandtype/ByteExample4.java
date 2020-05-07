@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class ByteExample_4 {
+public class ByteExample4 {
 
 	public static void main(String[] args) {
 		byte var1 = -128;

@@ -1,12 +1,12 @@
 package chapter7.inheritance;
 
-public class SupersonicAirplaneExample_13 {
+public class SupersonicAirplaneExample13 {
 
 	public static void main(String[] args) {
-		SupersonicAirplane_12 sa = new SupersonicAirplane_12();
+		SupersonicAirplane12 sa = new SupersonicAirplane12();
 		sa.takeOff();
 		sa.fly();
-		sa.flyMode = SupersonicAirplane_12.SUPERSONIC;
+		sa.flyMode = SupersonicAirplane12.SUPERSONIC;
 		sa.fly();
 		sa.land();
 	}

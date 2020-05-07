@@ -1,6 +1,6 @@
 package chapter11.apidocument;
 
-public class Key_13 {
+public class Key13 {
 
 	private int number;
 

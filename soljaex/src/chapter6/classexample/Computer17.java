@@ -1,6 +1,6 @@
 package chapter6.classexample;
 
-public class Computer_17 {
+public class Computer17 {
 	int sum1(int[] values) {
 		int sum = 0;
 		for(int i=0; i<values.length; i++) {

@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class LongOperationExample_14 {
+public class LongOperationExample14 {
 
 	public static void main(String[] args) {
 		byte value1 = 10;

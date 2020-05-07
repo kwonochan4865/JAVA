@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class LongExample_5 {
+public class LongExample5 {
 
 	public static void main(String[] args) {
 		long var1 = 10;

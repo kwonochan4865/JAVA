@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class EscapeExample_8 {
+public class EscapeExample8 {
 	public static void main(String[] args) {
 		System.out.println("번호\t이름\t직업");
 		System.out.print("행 단위 출력\n");

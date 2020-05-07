@@ -1,7 +1,7 @@
 package chapter7.inheritance;
 
-public class Cat_42 extends Animal_40 {
-	public Cat_42() {
+public class Cat42 extends Animal40 {
+	public Cat42() {
 		this.kind = "포유류";
 	}
 	

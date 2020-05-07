@@ -1,6 +1,6 @@
 package chapter7.inheritance;
 
-public abstract class Animal_40 { //추상 클래스
+public abstract class Animal40 { //추상 클래스
 	public String kind;
 	
 	public void breathe() {

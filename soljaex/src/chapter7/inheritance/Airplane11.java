@@ -1,6 +1,6 @@
 package chapter7.inheritance;
 
-public class Airplane_11 {
+public class Airplane11 {
 	public void land() {
 		System.out.println("착륙합니다.");
 	}

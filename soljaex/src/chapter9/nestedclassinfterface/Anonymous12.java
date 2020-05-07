@@ -1,8 +1,8 @@
 package chapter9.nestedclassinfterface;
 
-public class Anonymous_12 {
+public class Anonymous12 {
 	//필드 초기값으로 대입
-	Person_11 field = new Person_11() {
+	Person11 field = new Person11() {
 		void work() {
 			System.out.println("출근합니다.");
 		}
@@ -16,7 +16,7 @@ public class Anonymous_12 {
 
 	void method1() {
 		//로컬 변수값으로 대입
-		Person_11 localVar = new Person_11() {
+		Person11 localVar = new Person11() {
 	void walk() {
 		System.out.println("산책합니다.");
 	}
@@ -32,7 +32,7 @@ public class Anonymous_12 {
 
 //---------------------------------------------------------------------------------------------------
 	
-	void method2(Person_11 person) {
+	void method2(Person11 person) {
 		person.wake();
 	}
 }

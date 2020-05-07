@@ -1,6 +1,6 @@
 package chapter6.classexample;
 
-public class Car_44 {
+public class Car44 {
 	//필드
 	private int speed;
 	private boolean stop;

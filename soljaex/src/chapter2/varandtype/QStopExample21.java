@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class QStopExample_21 {
+public class QStopExample21 {
 
 	public static void main(String[] args) throws Exception {
 		int keyCode;

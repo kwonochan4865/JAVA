@@ -1,8 +1,8 @@
 package chapter7.inheritance;
 
-public class SmartPhone_38 extends Phone_37 {
+public class SmartPhone38 extends Phone37 {
 	//생성자
-	public SmartPhone_38(String owner) {
+	public SmartPhone38(String owner) {
 		super(owner);
 	}
 	//메서드

@@ -1,6 +1,6 @@
 package chapter5.typevar;
 
-public class ArrayInArrayExample_7 {
+public class ArrayInArrayExample7 {
 
 	public static void main(String[] args) {
 		

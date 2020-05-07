@@ -1,6 +1,6 @@
 package chapter4.ifexample;
 
-public class WhileSumFrom1To100Example_15 {
+public class WhileSumFrom1To100Example15 {
 
 	public static void main(String[] args) {
 		int sum = 0;

@@ -1,6 +1,6 @@
-package chapter3_operator;
+package chapter3.operator;
 
-public class CharOperationExample_5 {
+public class CharOperationExample5 {
 
 	public static void main(String[] args) {
 		char c1 = 'A' + 1;

@@ -1,9 +1,9 @@
 package chapter9.nestedclassinfterface;
 
-public class AnonymousExample_13 {
+public class AnonymousExample13 {
 
 	public static void main(String[] args) {
-		Anonymous_12 anony = new Anonymous_12();
+		Anonymous12 anony = new Anonymous12();
 		//익명 객체 필드 사용
 		anony.field.wake();
 
@@ -12,7 +12,7 @@ public class AnonymousExample_13 {
 		
 		//익명 객체 매개값 사용
 		anony.method2(
-				new Person_11() {
+				new Person11() {
 					void study() {
 						System.out.println("공부합니다");
 					}

@@ -1,6 +1,6 @@
 package chapter5.typevar;
 
-public class ArrayCreateByValueListExample2_3 {
+public class ArrayCreateByValueListExample23 {
 
 	public static void main(String[] args) {
 		int[] scores;

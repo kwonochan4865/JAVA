@@ -2,7 +2,7 @@ package chapter11.apidocument;
 
 import java.util.Date;
 
-public class ToStringExample_15 {
+public class ToStringExample15 {
 
 	public static void main(String[] args) {
 		Object obj1 = new Object();

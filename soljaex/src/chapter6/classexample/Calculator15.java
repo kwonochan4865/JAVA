@@ -1,6 +1,6 @@
 package chapter6.classexample;
 
-public class Calculator_15 {
+public class Calculator15 {
 	
 	//메소드
 	void powerOn() {

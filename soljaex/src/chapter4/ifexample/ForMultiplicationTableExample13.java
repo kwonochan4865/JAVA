@@ -1,6 +1,6 @@
 package chapter4.ifexample;
 
-public class ForMultiplicationTableExample_13 {
+public class ForMultiplicationTableExample13 {
 
 	public static void main(String[] args) {
 		for (int m=2; m<=9; m++) {

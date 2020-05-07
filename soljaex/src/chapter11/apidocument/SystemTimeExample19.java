@@ -1,6 +1,6 @@
 package chapter11.apidocument;
 
-public class SystemTimeExample_19 {
+public class SystemTimeExample19 {
 
 	public static void main(String[] args) {
 		long time1 = System.nanoTime();

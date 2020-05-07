@@ -1,6 +1,6 @@
 package chapter4.ifexample;
 
-public class IfDiceExample_4 {
+public class IfDiceExample4 {
 
 	public static void main(String[] args) {
 		int num = (int) (Math.random() * 6) + 1;

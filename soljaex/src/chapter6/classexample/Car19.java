@@ -1,6 +1,6 @@
 package chapter6.classexample;
 
-public class Car_19 {
+public class Car19 {
 	//필드
 	int gas;
 	

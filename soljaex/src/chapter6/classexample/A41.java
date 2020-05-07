@@ -1,6 +1,6 @@
 package chapter6.classexample;
 
-public class A_41 {
+public class A41 {
 	//필드
 	public int field1;
 	int field2;
@@ -8,7 +8,7 @@ public class A_41 {
 	
 	
 	//생성자
-	public A_41() {
+	public A41() {
 		field1 = 1;
 		field2 = 1;
 		field3 = 1;

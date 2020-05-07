@@ -1,6 +1,6 @@
 package chapter7.inheritance;
 
-public class Child_35 extends Parent_34{
+public class Child35 extends Parent34{
 	public String field2;
 	
 	public void method3() {

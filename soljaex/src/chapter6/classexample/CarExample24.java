@@ -1,9 +1,9 @@
 package chapter6.classexample;
 
-public class CarExample_24 {
+public class CarExample24 {
 
 	public static void main(String[] args) {
-		Car_23 myCar = new Car_23();
+		Car23 myCar = new Car23();
 		myCar.keyTurnOn();
 		myCar.run();
 		int speed = myCar.getSpeed();

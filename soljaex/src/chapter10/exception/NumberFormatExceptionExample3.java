@@ -1,6 +1,6 @@
 package chapter10.exception;
 
-public class NumberFormatExceptionExample_3 {
+public class NumberFormatExceptionExample3 {
 
 	public static void main(String[] args) {
 		String data1 = "100";

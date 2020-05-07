@@ -1,6 +1,6 @@
 package chapter8.interfaceex;
 
-public class Bus_18 implements Vehicle_17 {
+public class Bus18 implements Vehicle17 {
 
 	@Override
 	public void run() {

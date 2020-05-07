@@ -1,11 +1,11 @@
 package chapter8.interfaceex;
 
-public class SmartTelevisionExample_8 {
+public class SmartTelevisionExample8 {
 
 	public static void main(String[] args) {
-		SmartTelevision_7 tv = new SmartTelevision_7();
+		SmartTelevision7 tv = new SmartTelevision7();
 		
-		RemoteControl_2 rc = tv;
-		Searchable_6 searchable = tv;
+		RemoteControl2 rc = tv;
+		Searchable6 searchable = tv;
 	}
 }

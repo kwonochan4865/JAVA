@@ -1,6 +1,6 @@
 package chapter5.typevar;
 
-public class ArrayReferenceObjectExaple_8 {
+public class ArrayReferenceObjectExaple8 {
 
 	public static void main(String[] args) {
 		String[] strArray = new String[3];

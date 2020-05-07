@@ -1,6 +1,6 @@
-package chapter3_operator;
+package chapter3.operator;
 
-public class ArithmeticOperatorExample_4 {
+public class ArithmeticOperatorExample4 {
 
 	public static void main(String[] args) {
 		int v1 = 5;

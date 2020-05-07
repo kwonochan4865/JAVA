@@ -1,6 +1,6 @@
 package chapter6.classexample;
 
-public class Calculator_21 {
+public class Calculator21 {
 
 	int plus(int x, int y) {
 		int result = x + y;

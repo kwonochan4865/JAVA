@@ -1,6 +1,6 @@
 package chapter5.typevar;
 
-public class ArrayCopyByForExample_9 {
+public class ArrayCopyByForExample9 {
 
 	public static void main(String[] args) {
 		int[] oldIntArray = { 1, 2, 3 };

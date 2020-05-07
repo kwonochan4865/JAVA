@@ -1,6 +1,6 @@
-package chapter3_operator;
+package chapter3.operator;
 
-public class StringConcatExample_6 {
+public class StringConcatExample6 {
 
 	public static void main(String[] args) {
 		String str1 = "JDK" + 6.0;

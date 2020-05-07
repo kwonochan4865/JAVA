@@ -1,6 +1,6 @@
-package chapter3_operator;
+package chapter3.operator;
 
-public class LogicalOperatorExample_9 {
+public class LogicalOperatorExample9 {
 
 	public static void main(String[] args) {
 		int charCode = 'A';

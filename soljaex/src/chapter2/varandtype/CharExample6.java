@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class CharExample_6 {
+public class CharExample6 {
 
 	public static void main(String[] args) {
 		char c1 = 'A'; //문자를 직접 저장 

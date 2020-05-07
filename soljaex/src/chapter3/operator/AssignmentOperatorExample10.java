@@ -1,6 +1,6 @@
-package chapter3_operator;
+package chapter3.operator;
 
-public class AssignmentOperatorExample_10 {
+public class AssignmentOperatorExample10 {
 
 	public static void main(String[] args) {
 		int result = 0;

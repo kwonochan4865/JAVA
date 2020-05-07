@@ -1,13 +1,13 @@
 package chapter8.interfaceex;
 
-public class VehicleExample_23 {
+public class VehicleExample23 {
 
 	public static void main(String[] args) {
-		Vehicle_17 vehicle = new Bus_22();
+		Vehicle17 vehicle = new Bus22();
 		
 		vehicle.run();
 		
-		Bus_22 bus = (Bus_22) vehicle; //강제 타입 변환 처음엔 Bus_22를 Veicle_17로 변환했으나 다시 역변환 
+		Bus22 bus = (Bus22) vehicle; //강제 타입 변환 처음엔 Bus22를 Veicle17로 변환했으나 다시 역변환 
 		
 		bus.run();
 		bus.checkFare();

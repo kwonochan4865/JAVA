@@ -1,12 +1,12 @@
 package chapter6.classexample;
 
-public class Singleton_32 {
-	private static Singleton_32 singleton = new Singleton_32();
+public class Singleton32 {
+	private static Singleton32 singleton = new Singleton32();
 
-	private Singleton_32() {}
+	private Singleton32() {}
 	
 	
-	static Singleton_32 getInstace() {
+	static Singleton32 getInstace() {
 		return singleton;
 	}
 }

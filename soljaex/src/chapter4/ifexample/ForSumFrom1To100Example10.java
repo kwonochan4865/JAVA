@@ -1,6 +1,6 @@
 package chapter4.ifexample;
 
-public class ForSumFrom1To100Example_10 {
+public class ForSumFrom1To100Example10 {
 
 	public static void main(String[] args) {
 		int sum = 0;

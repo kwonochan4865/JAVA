@@ -1,10 +1,10 @@
 package chapter6.classexample;
 
-public class CarExample_4 {
+public class CarExample4 {
 
 	public static void main(String[] args) {
 		//객체 생성
-		Car_3 myCar = new Car_3();
+		Car3 myCar = new Car3();
 		
 		//필드값 읽기
 		System.out.println("제작회사: " + myCar.company);

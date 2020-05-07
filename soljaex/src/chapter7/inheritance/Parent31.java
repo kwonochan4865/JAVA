@@ -1,6 +1,6 @@
 package chapter7.inheritance;
 
-public class Parent_31 {
+public class Parent31 {
 	public String field1;
 	
 	public void method1() {

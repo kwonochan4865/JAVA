@@ -1,6 +1,6 @@
 package chapter4.ifexample;
 
-public class WhilePrintFrom1To10Example_14 {
+public class WhilePrintFrom1To10Example14 {
 
 	public static void main(String[] args) {
 		int i = 1;

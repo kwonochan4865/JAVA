@@ -1,9 +1,9 @@
 package chapter8.interfaceex;
 
-public class RemoteControlExample_5 {
+public class RemoteControlExample5 {
 	public static void main(String[] args) {
-		RemoteControl_2 rc;
-		rc = new Television_3();
-		rc = new Audio_4();
+		RemoteControl2 rc;
+		rc = new Television3();
+		rc = new Audio4();
 	}
 }

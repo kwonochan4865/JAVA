@@ -1,8 +1,8 @@
 package chapter9.nestedclassinfterface;
 
 	/**바깥 클래스**/
-	class A_1{
-		A_1() {System.out.print("A 객체가 생섬됨"); }
+	class A1{
+		A1() {System.out.print("A 객체가 생섬됨"); }
 		
 	/**인스턴스 맴버 클래스**/
 	class B { 

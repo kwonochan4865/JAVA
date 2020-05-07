@@ -1,6 +1,6 @@
 package chapter6.classexample;
 
-public class Car_3 {
+public class Car3 {
 	//필드
 	String company = "현대자동차";
 	String model = "그랜저";

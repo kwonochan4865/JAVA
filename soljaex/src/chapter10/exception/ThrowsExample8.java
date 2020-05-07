@@ -1,6 +1,6 @@
 package chapter10.exception;
 
-public class ThrowsExample_8 {
+public class ThrowsExample8 {
 
 	public static void main(String[] args) {
 		try {

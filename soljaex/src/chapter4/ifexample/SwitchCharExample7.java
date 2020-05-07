@@ -1,6 +1,6 @@
 package chapter4.ifexample;
 
-public class SwitchCharExample_7 {
+public class SwitchCharExample7 {
 	public static void main(String[] args) {
 		char grade = 'B';
 		

@@ -1,6 +1,6 @@
 package chapter10.exception;
 
-public class ArrayIndexOutOfBoundsExceptionExample_2 {
+public class ArrayIndexOutOfBoundsExceptionExample2 {
 
 	public static void main(String[] args) {
 		String data1 = args[0];

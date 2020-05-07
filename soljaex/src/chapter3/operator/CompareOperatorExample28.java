@@ -1,6 +1,6 @@
-package chapter3_operator;
+package chapter3.operator;
 
-public class CompareOperatorExample2_8 {
+public class CompareOperatorExample28 {
 
 	public static void main(String[] args) {
 		int v2 = 1;

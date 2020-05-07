@@ -1,6 +1,6 @@
 package chapter6.classexample;
 
-public class Student_1 {
+public class Student1 {
 
 
 }

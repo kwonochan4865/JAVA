@@ -1,14 +1,14 @@
 package chapter8.interfaceex;
 
-public class CarExample_15 {
+public class CarExample15 {
 
 	public static void main(String[] args) {
-		Car_14 myCar = new Car_14();
+		Car14 myCar = new Car14();
 		
 		myCar.run();
 		
-		myCar.frontLeftTire = new KumhoTire_13();
-		myCar.frontRightTire = new KumhoTire_13();
+		myCar.frontLeftTire = new KumhoTire13();
+		myCar.frontRightTire = new KumhoTire13();
 		
 		myCar.run();
 	}

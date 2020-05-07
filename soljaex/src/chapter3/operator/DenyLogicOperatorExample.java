@@ -1,6 +1,6 @@
-package chapter3_operator;
+package chapter3.operator;
 
-public class DenyLogicOperatorExample_3 {
+public class DenyLogicOperatorExample {
 
 	public static void main(String[] args) {
 		boolean play = true;

@@ -1,11 +1,11 @@
 package chapter6.classexample;
 
-public class CalculatorExample_30 {
+public class CalculatorExample30 {
 
 	public static void main(String[] args) {
-		double result1 = 10 * 10 * Calculator_29.pi;
-		int result2 = Calculator_29.plus(10, 5);
-		int result3 = Calculator_29.minus(10, 5);
+		double result1 = 10 * 10 * Calculator29.pi;
+		int result2 = Calculator29.plus(10, 5);
+		int result3 = Calculator29.minus(10, 5);
 		
 		System.out.println("result1 : " + result1);
 		System.out.println("result2 : " + result2);

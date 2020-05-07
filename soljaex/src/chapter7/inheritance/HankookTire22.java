@@ -1,9 +1,9 @@
 package chapter7.inheritance;
 
-public class HankookTire_22 extends Tire_20{
+public class HankookTire22 extends Tire20{
 	//필드
 	//생성자
-	public HankookTire_22(String location, int maxRotation) {
+	public HankookTire22(String location, int maxRotation) {
 		super(location, maxRotation);
 	}
 	//메서드

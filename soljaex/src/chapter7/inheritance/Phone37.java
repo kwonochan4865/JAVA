@@ -1,11 +1,11 @@
 package chapter7.inheritance;
 
-public abstract class Phone_37 {
+public abstract class Phone37 {
 	//필드
 	public String owner;
 	
 	//생성자
-	public Phone_37(String owner) {
+	public Phone37(String owner) {
 		this.owner = owner;
 	}
 	

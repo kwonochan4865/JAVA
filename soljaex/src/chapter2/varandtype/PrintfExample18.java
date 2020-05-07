@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class PrintfExample_18 {
+public class PrintfExample18 {
 
 	public static void main(String[] args) {
 		int value = 123;

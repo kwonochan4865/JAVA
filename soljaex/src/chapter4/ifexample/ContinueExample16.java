@@ -1,6 +1,6 @@
 package chapter4.ifexample;
 
-public class ContinueExample_16 {
+public class ContinueExample16 {
 
 	public static void main(String[] args) {
 		for(int i=1; i<=10; i++) {

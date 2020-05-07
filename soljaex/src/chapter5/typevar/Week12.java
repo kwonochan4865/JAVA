@@ -1,6 +1,6 @@
 package chapter5.typevar;
 
-public class Week_12 {
+public class Week12 {
 
 	public enum Week {
 		MONDAY,

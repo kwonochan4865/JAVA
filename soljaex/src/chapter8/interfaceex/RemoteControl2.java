@@ -1,9 +1,9 @@
 package chapter8.interfaceex;
 
-public interface RemoteControl_2 {
+public interface RemoteControl2 {
 	//상수
-	public int MAX_VOLUME =  10;
-	public int MIN_VOLUME = 0;
+	public int MAXVOLUME =  10;
+	public int MINVOLUME = 0;
 	
 	//추상 메서드
 	public void turnOn();

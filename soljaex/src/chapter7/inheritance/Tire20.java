@@ -1,13 +1,13 @@
 package chapter7.inheritance;
 
-public class Tire_20 {
+public class Tire20 {
 	//필드
 	public int maxRotation;
 	public int accumulatedRotation;
 	public String location;
 	
 	//생성자
-	public Tire_20(String location, int maxRotation) {
+	public Tire20(String location, int maxRotation) {
 		this.location = location;
 		this.maxRotation = maxRotation;
 	}

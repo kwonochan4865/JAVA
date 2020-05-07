@@ -1,9 +1,9 @@
 package chapter6.classexample;
 
-public class ComputerExample_18 {
+public class ComputerExample18 {
 
 	public static void main(String[] args) {
-		Computer_17 myCom = new Computer_17();
+		Computer17 myCom = new Computer17();
 		
 		int[] values1 = {1, 2, 3};
 		int result1 = myCom.sum1(values1);

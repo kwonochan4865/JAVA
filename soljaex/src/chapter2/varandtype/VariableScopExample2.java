@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class VariableScopExample_2 {
+public class VariableScopExample2 {
 	public static void main(String[] args) {
 		int v1 = 15;
 		if(v1>10) {

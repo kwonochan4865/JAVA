@@ -1,6 +1,6 @@
 package chapter8.interfaceex;
 
-public class Audio_4 implements RemoteControl_2 {
+public class Audio4 implements RemoteControl2 {
 	//필드
 	private int volume;
 	
@@ -13,8 +13,8 @@ public class Audio_4 implements RemoteControl_2 {
 		System.out.println("Audio를 끕니다.");
 	}
 	public void setVolume(int volume) {
-		if(volume>RemoteControl_2.MAX_VOLUME) {
-			this.volume = RemoteControl_2.MAX_VOLUME;
+		if(volume>RemoteControl2.MAXVOLUME) {
+			this.volume = RemoteControl2.MAXVOLUME;
 		} else {
 			this.volume = volume;
 	}

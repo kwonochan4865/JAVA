@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class FloatDoubleExample_9 {
+public class FloatDoubleExample9 {
 
 	public static void main(String[] args) {
 		//실수값 저장 예제

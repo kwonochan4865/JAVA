@@ -1,6 +1,6 @@
 package chapter8.interfaceex;
 
-public class ImplementationC_29 implements InterfaceC_28 {
+public class ImplementationC29 implements InterfaceC28 {
 	public void methodA() {
 		System.out.println("ImplementationC-methodA() 실행");
 	}

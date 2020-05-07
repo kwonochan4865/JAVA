@@ -1,6 +1,6 @@
 package chapter5.typevar;
 
-public class StringEqualsExample_1 {
+public class StringEqualsExample1 {
 
 	public static void main(String[] args) {
 		String strVar1 = "신민철";

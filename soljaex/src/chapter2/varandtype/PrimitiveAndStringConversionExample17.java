@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class PrimitiveAndStringConversionExample_17 {
+public class PrimitiveAndStringConversionExample17 {
 
 	public static void main(String[] args) {
 		int value1 = Integer.parseInt("10");

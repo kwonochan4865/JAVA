@@ -1,5 +1,5 @@
 package chapter7.inheritance;
 
-public final class Member_14 {
+public final class Member14 {
 	
 }

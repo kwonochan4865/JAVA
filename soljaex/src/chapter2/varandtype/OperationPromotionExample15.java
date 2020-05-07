@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class OperationPromotionExample_15 {
+public class OperationPromotionExample15 {
 
 	public static void main(String[] args) {
 		byte byteValue1 = 10;

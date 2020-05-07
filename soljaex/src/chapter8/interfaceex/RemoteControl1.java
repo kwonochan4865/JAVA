@@ -1,6 +1,6 @@
 package chapter8.interfaceex;
 
-public interface RemoteControl_1 {
-	public int MAX_VOLUME = 10;
-	public int MIN_VOLUM = 0;
+public interface RemoteControl1 {
+	public int MAXVOLUME = 10;
+	public int MINVOLUM = 0;
 }

@@ -1,11 +1,11 @@
 package chapter11.apidocument;
 
-public class MemberExample_10 {
+public class MemberExample10 {
 
 	public static void main(String[] args) {
-		Member_9 obj1 = new Member_9("blue");
-		Member_9 obj2 = new Member_9("blue");
-		Member_9 obj3 = new Member_9("red");
+		Member9 obj1 = new Member9("blue");
+		Member9 obj2 = new Member9("blue");
+		Member9 obj3 = new Member9("red");
 		
 		if(obj1.equals(obj2)) {
 			System.out.println("obj1과 obj2는 동등합니다.");

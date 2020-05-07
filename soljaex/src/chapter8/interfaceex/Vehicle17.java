@@ -1,5 +1,5 @@
 package chapter8.interfaceex;
 
-interface Vehicle_17 {
+interface Vehicle17 {
 	public void run();
 }

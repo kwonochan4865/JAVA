@@ -1,6 +1,6 @@
 package chapter10.exception;
 
-public class CatchByExceptionKindExample_6 {
+public class CatchByExceptionKindExample6 {
 
 	public static void main(String[] args) {
 		try {

@@ -1,6 +1,6 @@
 package chapter9.nestedclassinfterface;
 
-public class A_3 {
+public class A3 {
 	int field1;
 	void method1() { }
 

@@ -1,4 +1,4 @@
-package chapter3_operator;
+package chapter3.operator;
 
 public class ArithmeticOperatorExample13 {
 

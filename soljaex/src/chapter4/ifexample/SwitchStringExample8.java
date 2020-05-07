@@ -1,6 +1,6 @@
 package chapter4.ifexample;
 
-public class SwitchStringExample_8 {
+public class SwitchStringExample8 {
 
 	public static void main(String[] args) {
 		String position = "과장";

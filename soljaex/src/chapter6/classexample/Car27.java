@@ -1,12 +1,12 @@
 package chapter6.classexample;
 
-public class Car_27 {
+public class Car27 {
 	//필드
 	String model;
 	int Speed;
 	
 	//생성자
-	Car_27(String model) {
+	Car27(String model) {
 		this.model = model;
 	}
 	

@@ -1,11 +1,11 @@
 package chapter7.inheritance;
 
-public class Car_21 {
+public class Car21 {
 	//필드
-	Tire_20 frontLeftTire = new Tire_20("앞왼쪽", 6);
-	Tire_20 frontRightTire = new Tire_20("앞오른쪽", 2);
-	Tire_20 backLeftTire = new Tire_20("뒤왼쪽", 3);
-	Tire_20 backRightTire = new Tire_20("뒤오른쪽", 4);
+	Tire20 frontLeftTire = new Tire20("앞왼쪽", 6);
+	Tire20 frontRightTire = new Tire20("앞오른쪽", 2);
+	Tire20 backLeftTire = new Tire20("뒤왼쪽", 3);
+	Tire20 backRightTire = new Tire20("뒤오른쪽", 4);
 	
 	//생성자
 	//메서드

@@ -1,10 +1,10 @@
 package chapter7.inheritance;
 
-public class People_4 {
+public class People4 {
 	public String name;
 	public String ssn;
 
-	public People_4(String name, String ssn) {
+	public People4(String name, String ssn) {
 		this.name = name;
 		this.ssn = ssn;
 		

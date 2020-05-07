@@ -1,6 +1,6 @@
 package chapter4.ifexample;
 
-public class SwitchExample_5 {
+public class SwitchExample5 {
 	public static void main(String[] args) {
 		int num = (int) (Math.random() * 6) + 1;
 		

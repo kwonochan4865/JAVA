@@ -1,6 +1,6 @@
 package chapter7.inheritance;
 
-public class CellPhone_1 {
+public class CellPhone1 {
 	//필드
 	String model;
 	String color;

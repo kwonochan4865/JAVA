@@ -1,6 +1,6 @@
 package chapter6.classexample;
 
-public class Calculator_13 {
+public class Calculator13 {
 	//메소드
 	void powerOn() {
 		System.out.println("전원을 켭니다.");

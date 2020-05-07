@@ -1,6 +1,6 @@
 package chapter5.typevar;
 
-public class MainStringArrayArgument_6 {
+public class MainStringArrayArgument6 {
 
 	public static void main(String[] args) {
 		if(args.length != 2) {

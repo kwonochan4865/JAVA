@@ -1,9 +1,9 @@
 package chapter7.inheritance;
 
-public class KumhoTire_23 extends Tire_20{
+public class KumhoTire23 extends Tire20{
 	//필드
 	//생성자
-	public KumhoTire_23(String location, int maxRotation) {
+	public KumhoTire23(String location, int maxRotation) {
 		super(location, maxRotation);
 	}
 	

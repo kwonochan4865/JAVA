@@ -1,6 +1,6 @@
 package chapter6.classexample;
 
-public class Calculator_25 {
+public class Calculator25 {
 	//정사각형의 넓이
 	double areaRectangle(double width) {
 		return width * width;

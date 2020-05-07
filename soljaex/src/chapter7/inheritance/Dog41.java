@@ -1,8 +1,8 @@
 package chapter7.inheritance;
 
-public class Dog_41 extends Animal_40 {
+public class Dog41 extends Animal40 {
 
-	public Dog_41() {
+	public Dog41() {
 		this.kind = "포유류";
 	}
 	@Override 

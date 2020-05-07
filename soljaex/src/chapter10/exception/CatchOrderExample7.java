@@ -1,6 +1,6 @@
 package chapter10.exception;
 
-public class CatchOrderExample_7 {
+public class CatchOrderExample7 {
 
 	public static void main(String[] args) {
 		try {

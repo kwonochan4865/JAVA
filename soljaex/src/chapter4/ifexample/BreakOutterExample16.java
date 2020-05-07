@@ -1,6 +1,6 @@
 package chapter4.ifexample;
 
-public class BreakOutterExample_16 {
+public class BreakOutterExample16 {
 	public static void main(String[] args) {
 		Outter: for(char upper='A'; upper<='Z'; upper++) {
 			for(char lower='a'; lower<='z'; lower++) {

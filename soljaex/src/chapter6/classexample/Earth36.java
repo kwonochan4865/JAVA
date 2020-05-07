@@ -1,7 +1,7 @@
 package chapter6.classexample;
 
-public class Earth_36 {
-	static final double EARTH_RADIUS = 6400;
-	static final double EARTH_AREA = 4 * Math.PI * EARTH_RADIUS * EARTH_RADIUS;
+public class Earth36 {
+	static final double EARTHRADIUS = 6400;
+	static final double EARTHAREA = 4 * Math.PI * EARTHRADIUS * EARTHRADIUS;
 }
 

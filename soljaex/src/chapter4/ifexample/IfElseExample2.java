@@ -1,6 +1,6 @@
 package chapter4.ifexample;
 
-public class IfElseExample_2 {
+public class IfElseExample2 {
 
 	public static void main(String[] args) {
 		int score = 85;

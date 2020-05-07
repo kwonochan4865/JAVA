@@ -1,6 +1,6 @@
 package chapter9.nestedclassinfterface;
 
-public class Anonymous_17 {
+public class Anonymous17 {
 	private int field;
 	
 	public void method(final int arg1, int arg2) {
@@ -15,7 +15,7 @@ public class Anonymous_17 {
 		//var1 = 30;
 		//var2 = 30;
 		
-		Calculatable_16 calc = new Calculatable_16() {
+		Calculatable16 calc = new Calculatable16() {
 			@Override
 			public int sum() {
 				int result = field + arg1 + arg2 + var1 + var2;

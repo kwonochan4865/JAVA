@@ -1,9 +1,9 @@
 package chapter6.classexample;
 
-public class CalculatorExample_26 {
+public class CalculatorExample26 {
 
 	public static void main(String[] args) {
-		Calculator_25 myCalcu = new Calculator_25();
+		Calculator25 myCalcu = new Calculator25();
 		
 		//정사각형의 넓이 구하기 
 		double result1 = myCalcu.areaRectangle(10);

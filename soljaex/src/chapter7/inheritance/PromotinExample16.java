@@ -9,7 +9,7 @@ class C extends A {}
 class D extends B {}
 class E extends C {}
 
-public class PromotinExample_16 {
+public class PromotinExample16 {
 	public static void main(String[] args) {
 		B b = new B();
 		C c = new C();

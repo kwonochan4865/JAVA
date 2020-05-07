@@ -2,7 +2,7 @@ package chapter2.varandtype;
 
 import java.io.IOException;
 
-public class KeyCodeExample_19 {
+public class KeyCodeExample19 {
 
 	public static void main(String[] args) throws IOException {
 		int keyCode;

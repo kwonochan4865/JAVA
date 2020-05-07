@@ -1,6 +1,6 @@
-package chapter3_operator;
+package chapter3.operator;
 
-public class SignOperatorExample_1 {
+public class SignOperatorExample1 {
 	public static void main (String[] args) {
 		int x = -100;
 		int result1 = +x;

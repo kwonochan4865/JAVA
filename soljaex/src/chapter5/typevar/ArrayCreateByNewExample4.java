@@ -1,6 +1,6 @@
 package chapter5.typevar;
 
-public class ArrayCreateByNewExample_4 {
+public class ArrayCreateByNewExample4 {
 
 	public static void main(String[] args) {
 		int[] arr1 = new int[3];

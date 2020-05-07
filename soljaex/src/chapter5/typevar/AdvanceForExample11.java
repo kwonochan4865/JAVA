@@ -1,6 +1,6 @@
 package chapter5.typevar;
 
-public class AdvanceForExample_11 {
+public class AdvanceForExample11 {
 
 	public static void main(String[] args) {
 		int[] scores = { 95, 71, 84, 93, 87 };

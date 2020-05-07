@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class StringExample_7 {
+public class StringExample7 {
 
 	public static void main(String[] args) {
 		String name = "홍길동";

@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class IntegerLiteralExample_3 {
+public class IntegerLiteralExample3 {
 	public static void main(String[] args) {
 		int var1 = 0b1011;
 		int var2 = 0206;

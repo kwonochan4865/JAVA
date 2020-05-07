@@ -1,6 +1,6 @@
 package chapter8.interfaceex;
 
-public class SmartTelevision_7 implements RemoteControl_2, Searchable_6 {
+public class SmartTelevision7 implements RemoteControl2, Searchable6 {
 	private int volume;
 	
 	public void turnOn() {
@@ -10,10 +10,10 @@ public class SmartTelevision_7 implements RemoteControl_2, Searchable_6 {
 		System.out.println("TV를 끕니다.");
 	}
 	public void setVolume(int volume) {
-		if(volume>RemoteControl_2.MAX_VOLUME) {
-			this.volume = RemoteControl_2.MAX_VOLUME;
-		} else if(volume<RemoteControl_2.MIN_VOLUME) {
-			this.volume = RemoteControl_2.MIN_VOLUME;
+		if(volume>RemoteControl2.MAXVOLUME) {
+			this.volume = RemoteControl2.MAXVOLUME;
+		} else if(volume<RemoteControl2.MINVOLUME) {
+			this.volume = RemoteControl2.MINVOLUME;
 		} else {
 			this.volume = volume;
 		}

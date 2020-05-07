@@ -1,6 +1,6 @@
 package chapter9.nestedclassinfterface;
 
-public class Button_14 {
+public class Button14 {
 	OnClickListener listener;
 	
 	void setOnClickListener(OnClickListener listener) {

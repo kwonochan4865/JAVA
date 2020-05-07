@@ -1,6 +1,6 @@
-package chapter3_operator;
+package chapter3.operator;
 
-public class ConditionalOperationExample_11 {
+public class ConditionalOperationExample11 {
 
 	public static void main(String[] args) {
 		int score = 85;

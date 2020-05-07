@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class StringConcatExample_16 {
+public class StringConcatExample16 {
 
 	public static void main(String[] args) {
 		//숫자 연산 

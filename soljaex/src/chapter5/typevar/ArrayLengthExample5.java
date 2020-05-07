@@ -1,6 +1,6 @@
 package chapter5.typevar;
 
-public class ArrayLengthExample_5 {
+public class ArrayLengthExample5 {
 
 	public static void main(String[] args) {
 		int[] scores = { 83, 90, 87 };

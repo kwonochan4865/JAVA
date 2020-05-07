@@ -1,6 +1,6 @@
 package chapter4.ifexample;
 
-public class SwitchNoBreakCaseExample_6 {
+public class SwitchNoBreakCaseExample6 {
 
 	public static void main(String[] args) {
 		int time = (int) (Math.random() * 4) + 8;

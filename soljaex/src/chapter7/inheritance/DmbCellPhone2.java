@@ -1,11 +1,11 @@
 package chapter7.inheritance;
 
-public class DmbCellPhone_2 extends CellPhone_1 {
+public class DmbCellPhone2 extends CellPhone1 {
 	//필드
 	int channel;
 	
 	//생성자
-	DmbCellPhone_2(String model, String color, int channel) {
+	DmbCellPhone2(String model, String color, int channel) {
 		this.model = model;
 		this.color = color;
 		this.channel = channel;

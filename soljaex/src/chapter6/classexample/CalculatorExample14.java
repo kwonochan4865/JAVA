@@ -1,9 +1,9 @@
 package chapter6.classexample;
 
-public class CalculatorExample_14 {
+public class CalculatorExample14 {
 
 	public static void main(String[] args) {
-		Calculator_13 myCalc = new Calculator_13();
+		Calculator13 myCalc = new Calculator13();
 		myCalc.powerOn();
 		
 		int result1 = myCalc.plus(5, 6);

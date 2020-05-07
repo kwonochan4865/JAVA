@@ -1,10 +1,10 @@
 package chapter7.inheritance;
 
-public class DmbCellPhoneExample_3 {
+public class DmbCellPhoneExample3 {
 
 	public static void main(String[] args) {
 		//DmbCellPhone 객체 생성
-		DmbCellPhone_2 dmbCellPhone = new DmbCellPhone_2("자바폰","검정", 10);
+		DmbCellPhone2 dmbCellPhone = new DmbCellPhone2("자바폰","검정", 10);
 		
 		//CellPhone 클래스로부터 상속받은 필드
 		System.out.println("모델: " + dmbCellPhone.model);

@@ -1,7 +1,7 @@
 package chapter6.classexample;
 
-public class Car_5 {
+public class Car5 {
 	//생성자
-	Car_5(String color, int cc) {
+	Car5(String color, int cc) {
 	}
 }

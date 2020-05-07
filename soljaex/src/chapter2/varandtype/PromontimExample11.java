@@ -1,6 +1,6 @@
 package chapter2.varandtype;
 
-public class PromontimExample_11 {
+public class PromontimExample11 {
 
 	public static void main(String[] args) {
 

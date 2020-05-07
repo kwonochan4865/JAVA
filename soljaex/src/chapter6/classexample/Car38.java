@@ -5,7 +5,7 @@ import sec06.exam02.hankook.*;
 import sec06.exam02.kumho.*;
 import sec06.exam02.hyundai.Engine;
 
-public class Car_38 {
+public class Car38 {
 
 	
 	//필드

@@ -2,8 +2,8 @@ package chapter5.typevar;
 
 import java.util.Calendar;
 
-import chapter5.typevar.Week_12.Week;
-public class EnumWeekExample_13 {
+import chapter5.typevar.Week12.Week;
+public class EnumWeekExample13 {
 
 	public static void main(String[] args) {
 		Week today = null;
