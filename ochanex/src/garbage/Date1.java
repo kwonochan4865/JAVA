@@ -1,4 +1,4 @@
-package ochanex;
+package garbage;
 
 import java.text.SimpleDateFormat;
 import java.util.*;

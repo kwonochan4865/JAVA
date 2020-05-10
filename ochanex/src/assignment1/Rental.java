@@ -1,5 +1,7 @@
 package assignment1;
 
+import java.util.Date;
+
 public class Rental {
 	private Member member;
 	private Video video;

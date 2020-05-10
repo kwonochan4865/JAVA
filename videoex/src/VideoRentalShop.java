@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Vector;
@@ -93,7 +95,7 @@ public class VideoRentalShop {//비디오 렌탈 샵 클래스
 			System.out.println("고객 추가를 실패했습니다.");
 	}
 	
-	public void addVideoTitle(){
+	public void addVideoTitle() throws IOException{
 		boolean isAdd = vecVdoTt.add(new VideoTitle());
 		if(isAdd)
 			System.out.println("비디오 타이틀이 추가되었습니다.");
@@ -177,7 +179,7 @@ public class VideoRentalShop {//비디오 렌탈 샵 클래스
 	
 	
 	
-	public static void main(String[] args){
+	public static void main(String[] args) throws IOException{
 		VideoRentalShop vrs = new VideoRentalShop();
 		Scanner sc = new Scanner(System.in);
 		int sltMenu = 0;
