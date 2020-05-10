@@ -20,7 +20,7 @@ public class Video {
 			code = in.readLine();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			System.err.print("error the generate video");
+			System.err.print("error the generating video");
 			e.printStackTrace();
 		}		
 		this.isRantal = false;

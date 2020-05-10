@@ -7,11 +7,11 @@ public class Date {//날짜 클레스
 	private Scanner sc = new Scanner(System.in);
 	
 	public Date(){
-		System.out.print("현제 년도를 입력하세요 : ");
+		System.out.print("현재 년도를 입력하세요 : ");
 		year = sc.nextInt();
-		System.out.print("현제 달을 입력하세요 : ");
+		System.out.print("현재 달을 입력하세요 : ");
 		month = sc.nextInt();
-		System.out.print("현제 날짜를 입력하세요 : ");
+		System.out.print("현재 날짜를 입력하세요 : ");
 		day = sc.nextInt();		
 	}
 	
