@@ -1,5 +1,6 @@
 package assignment1;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -32,7 +33,6 @@ public class VideoCode {
 		
 		}
 	}
-
 //	public void Hashset() {
 //		setEnrolledVideoinfo();
 //		HashMap<title, > map = new HashMap<title, barcodenum>();

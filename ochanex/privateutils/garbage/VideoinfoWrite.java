@@ -5,11 +5,9 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.Vector;
 
-import assignment1.VideoExample;
-
 public class VideoinfoWrite {
 
-	private String Title;
+	private VideoCode Title;
 	private String Barcodenum;
 	private String Director;
 	private String Openyear;

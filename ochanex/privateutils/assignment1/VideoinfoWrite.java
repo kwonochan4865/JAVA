@@ -29,6 +29,10 @@ public class VideoinfoWrite {
 		yy.close();
 	}
 
+	public void boy() throws IOException {
+	
+	}
+
 	public String getTitle() {
 		return title;
 	}
