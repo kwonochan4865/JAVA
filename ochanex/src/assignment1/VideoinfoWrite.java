@@ -1,46 +1,71 @@
 package assignment1;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.Writer;
+import java.util.Vector;
 
 public class VideoinfoWrite {
-	private String year;
-	private String title;
-	private String director;
-		
-	public VideoinfoWrite() throws IOException{
-		this.setVideoTitle();
-	}
-	
-	public void setVideoTitle() throws IOException{//비디오 타이틀 생성자
-		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		try {
-			System.out.print("비디오 개봉 년도를 입력하세요 : ");
-			year = in.readLine();
-			System.out.print("비디오 제목을 입력하세요 : ");
-			title = in.readLine();
-			System.out.print("비디오 감독을 입력하세요 : ");
-			director = in.readLine();
-/**
- * 밑에는 메소드로 한 번에 묶어서 처리할 것들임
- */
+
+	private static String Title;
+	private String Barcodenum;
+	private String Director;
+	private String Openyear;
+
+	public VideoinfoWrite() throws IOException {
+		VideoCode sn = new VideoCode();
+		Title = sn.getTitle();
+		Barcodenum = sn.getBarcodenum();
+		Director = sn.getDirector();
+		Openyear = sn.getOpenyear();
 		Writer yy = new FileWriter("./database.txt", true);
-		this.year = year;
-		this.title = title;
-		this.director = director;
-		yy.write(year+  "∞");
-		yy.write(title + "");
-		yy.write(director + "∞");
+		yy.write(Title + "∞");
+		yy.write(Barcodenum + "∞");
+		yy.write(Director + "∞");
+		yy.write(Openyear + "∞");
+		System.out.println();
 		yy.flush();
 		yy.close();
-	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		BufferedReader br = new BufferedReader(new FileReader("./database.txt"));
-		String temp = br.readLine();
-		System.out.println(temp);
+	}
+
+	public void boy() throws IOException {
+	
+	}
+
+	public static String getTitle() {
+		return Title;
+	}
+
+	public void setTitle(String title) {
+		Title = title;
+	}
+
+	public String getBarcodenum() {
+		return Barcodenum;
+	}
+
+	public void setBarcodenum(String barcondenum) {
+		Barcodenum = barcondenum;
+	}
+
+	public String getDirector() {
+		return Director;
+	}
+
+	public void setDirector(String director) {
+		Director = director;
+	}
+
+	public String getOpenyear() {
+		return Openyear;
+	}
+
+	public void setOpenyear(String openyear) {
+		Openyear = openyear;
+	}
+
+}
+
 //		File fin = new File("./database.txt");
 //		if(fin.exists()) {
 //			BufferedReader ib = new BufferedReader(new FileReader(fin));
@@ -48,37 +73,3 @@ public class VideoinfoWrite {
 //			while((line = ib.readLine()) !=null) {
 //				line = line.trim();
 //			}
-//		}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			System.err.print("비디오 생성중 오류");
-			e.printStackTrace();
-		}			
-
-	}
-	///////////////////////////////////////////Getter and Setter	
-	public void setYear(String year){
-		this.year = year;
-	}
-	
-	public void setTitle(String title){
-		this.title = title;
-	}
-	
-	public void setDirector(String director){
-		this.director = director;
-	}
-	
-	public String getYear(){
-		return this.year;
-	}
-	
-	public String getTitle(){
-		return this.title;
-	}
-	
-	public String getDirector(){
-		return this.director;
-	}	
-}
-

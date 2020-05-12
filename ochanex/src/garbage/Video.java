@@ -1,10 +1,12 @@
-package assignment1;
+package garbage;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import assignment1.VideoinfoWrite;
+
 public class Video {
-	private SerialNumber enrolledvideoinfo;
+//	private VideoCode enrolledvideoinfo;
 	private String title;
 	private int serialnum;
 	private int order;
@@ -13,8 +15,8 @@ public class Video {
 	private InputStreamReader in = new InputStreamReader(System.in);
 // System.in 입력값을 in을 리모콘으로 하는 InputStreamReader 객체 생성
 
-	public Video(SerialNumber enrolledvideoinfo) { // enrolledvideoinfo를 변수로
-		this.enrolledvideoinfo = enrolledvideoinfo;
+	public Video(VideoinfoWrite videoinfoWrite) { // enrolledvideoinfo를 변수로
+//		this.enrolledvideoinfo = enrolledvideoinfo;
 		try {
 			System.out.print("비디오 제목을 입력해주세요");
 			serialnum = in.read(); // serialnum에 (in을 통해)읽은 값 넣음
@@ -42,9 +44,9 @@ public class Video {
 		this.order = order;
 	}
 
-	public SerialNumber getEnrolledvideoinfo() {
-		return enrolledvideoinfo;
-	}
+//	public VideoCode getEnrolledvideoinfo() {
+//		return enrolledvideoinfo;
+//	}
 
 	public int getSerialnum() {
 		return serialnum;

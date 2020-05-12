@@ -2,6 +2,8 @@ package assignment1;
 
 import java.util.Date;
 
+import garbage.Video;
+
 public class Rental {
 	private Member member;
 	private Video video;
