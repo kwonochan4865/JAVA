@@ -18,7 +18,6 @@ public class VideoinfoRead {
 //		barcodenum = vc.getBarcodenum();
 //		director = vc.getDirector();
 //		openyear = vc.getOpenyear();
-//	String[] word = new String[4];
 		System.out.println(vp.capacity());
 	BufferedReader br = new BufferedReader(new FileReader("./database.txt"));	
 	String line = br.readLine();

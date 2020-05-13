@@ -11,6 +11,8 @@ public class VideoinfoWrite {
 	private String barcodenum;
 	private String director;
 	private String openyear;
+	private boolean isRental;
+	private Member borrower;
 
 	public VideoinfoWrite() throws IOException {
 		VideoCode sn = new VideoCode();
@@ -59,6 +61,10 @@ public class VideoinfoWrite {
 
 	public void setOpenyear(String openyear) {
 		openyear = openyear;
+	}
+	public void returned(){
+		borrower = null;
+		isRental = false;
 	}
 
 }

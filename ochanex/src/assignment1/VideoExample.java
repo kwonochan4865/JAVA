@@ -52,12 +52,19 @@ public class VideoExample {
 
 ////////////////////////////////////(2) 비디오 반납
 	public void returnVideo() {
-		if (this.vecRental.isEmpty()) {
-			System.out.println("반납할 비디오가 없습니다.");
-			return;
-		}
-		int vdoSelect;
-//		this.enrolledRentalList();
+//		if (this.vecRental.isEmpty()) {
+//			System.out.println("반납할 비디오가 없습니다.");
+//			return;
+//		}
+//
+//		int vdoSelect;
+//		this.enrollinfo();
+//		System.out.print("반납할 비디오를 선택해 주세요 : ");
+//		vdoSelect = new Scanner(System.in).nextInt();
+//		for(int i = 0; i<vecEnroll.size(); i++){
+//			if(vecEnroll.get(i).getBarcodenum().equals(vecRental.get(vdoSelect).getVideo().getCode())){
+//				vecEnroll.get(i).returned();
+//			}
 	}
 
 //-----------------------------------------------------------------------------------------------------------------
