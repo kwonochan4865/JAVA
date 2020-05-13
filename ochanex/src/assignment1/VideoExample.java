@@ -8,17 +8,20 @@ import java.util.Vector;
 public class VideoExample {
 	private Vector<VideoinfoWrite> vecEnroll = new Vector<VideoinfoWrite>();
 	private Vector<Rental> vecRental = new Vector<Rental>();
-//	private Vector<VideoCode> vecCode = new Vector<VideoCode>();
-	private Vector<Member> vecMem = new Vector<Member>();
-//	VideoinfoRead vi = new VideoinfoRead();
-	
-	public Vector<VideoinfoWrite> getvecEnroll() {
-		return vecEnroll;
+	private Vector<VideoCode> vecCode = new Vector<VideoCode>();
+	private Vector<MeminfoWrite> vecMem = new Vector<MeminfoWrite>();
+	VideoinfoRead vi = new VideoinfoRead();
+
+	public void ok() throws IOException {
 	}
 
-	public void setvecEnroll(Vector<VideoinfoWrite> vecEnroll) {
-		this.vecEnroll = vecEnroll; // 비디오 정보를 밖으로 호출하기 위해 필요
-	}
+//	public Vector<VideoinfoWrite> getvecEnroll() {
+//		return vecEnroll;
+//	}
+//
+//	public void setvecEnroll(Vector<VideoinfoWrite> vecEnroll) {
+//		this.vecEnroll = vecEnroll; // 비디오 정보를 밖으로 호출하기 위해 필요
+//	}
 
 //-----------------------------------------------------------------------------------------------------------------
 /////////////////////////////////(1) 비디오 대여 
@@ -38,10 +41,10 @@ public class VideoExample {
 		vdoInfo();
 
 		System.out.print("대여할 비디오를 선택해주세요");
-		
-		while(true)
-			vdoSelect = new Scanner(System.in).nextInt();
-//		if(this.vecEnroll.get(vdoSelect).getIsRental() == true)
+
+//		while(true)
+//			vdoSelect = new Scanner(System.in).nextInt();
+//		if(this.vp.get(vdoSelect).isRental() == true)
 //			System.out.println("이미 대여된 비디오입니다.");
 //		else
 //			break;
@@ -68,9 +71,9 @@ public class VideoExample {
 	}
 
 /////////////////////////////(4) 회원 등록 과정
-	public void waytoEnrollMem() {
-		boolean isEnroll = vecMem.add(new Member());
-		if(isEnroll)
+	public void waytoEnrollMem() throws IOException {
+		boolean isEnroll = vecMem.add(new MeminfoWrite());
+		if (isEnroll)
 			System.out.println("회원이 추가되었습니다.");
 		else
 			System.out.println("회원 추가를 실패하였습니다.");
@@ -88,10 +91,10 @@ public class VideoExample {
 		System.out.println("번호\t\t|\t\t제목\t\t|\t\t감독\t\t|\t\t\t바코드\t\t|\t\t개봉년도");
 		int a = 1;
 		for (int i = 0; i < vecEnroll.size(); i++) {
-			System.out.print("" + i+a + ". ");
-			System.out.print("              " + vecEnroll.get(i).getTitle()+"\t\t\t\t");
-			System.out.print(vecEnroll.get(i).getDirector()+"\t\t\t\t");
-			System.out.print(vecEnroll.get(i).getBarcodenum()+"\t\t\t\t");
+			System.out.print("" + i + a + ". ");
+			System.out.print("              " + vecEnroll.get(i).getTitle() + "\t\t\t\t");
+			System.out.print(vecEnroll.get(i).getDirector() + "\t\t\t\t");
+			System.out.print(vecEnroll.get(i).getBarcodenum() + "\t\t\t\t");
 			System.out.print(vecEnroll.get(i).getOpenyear());
 			System.out.println();
 		}
@@ -99,22 +102,27 @@ public class VideoExample {
 
 //////////////////////////////////////////(6) 회원 정보 
 	public void memInfo() {
-		boolean Memenrolled = vecMem.add(new Member());
-		if (Memenrolled)
-			System.out.println("회원 등록 완료");
-		else
-			System.out.println("회원 등록에 실패하였습니다.");
+		System.out.println("순번     회원 이름                    회원 전화번호");
+		int a = 1;
+		for (int i = 0; i < vecMem.size(); i++) {
+			System.out.print("" + (i + a) + ".      ");
+			System.out.print(vecMem.get(i).getName() + "             ");
+			System.out.print(vecMem.get(i).getPhoneNum());
+			System.out.println("");
+		}
 	}
 
-public void enrollinfo() {
-	if(vecEnroll.isEmpty()) {
-	System.out.println("대여된 비디오가 없습니다."); 
-	}	else {
-		Date set = new Date();
+	public void enrollinfo() {
+		if (vecEnroll.isEmpty()) {
+			System.out.println("대여된 비디오가 없습니다.");
+		} else {
+			Date set = new Date();
+		}
 	}
-}
-public void Example() {
-}
+
+	public void Example() {
+	}
+
 //-----------------------------------------------------------------------------------------------------------------
 /////////////////////////////////////////////////// main
 	public static void main(String[] args) throws IOException {

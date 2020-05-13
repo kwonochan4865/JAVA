@@ -20,7 +20,7 @@ public class VideoinfoWrite {
 		director = sn.getDirector();
 		openyear = sn.getOpenyear();
 
-		Writer yy = new FileWriter("./database.txt", true);
+		Writer yy = new FileWriter("./비디오정보", true);
 		yy.write(title + "∞");
 		yy.write(barcodenum + "∞");
 		yy.write(director + "∞");

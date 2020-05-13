@@ -22,7 +22,7 @@ public class VideoinfoExample1 {
 		
 		
 		
-		VideoinfoRead1.Input();
+		VideoinfoRead.Input();
 	}
 	}
 }

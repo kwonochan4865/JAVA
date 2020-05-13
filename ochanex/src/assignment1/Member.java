@@ -50,7 +50,7 @@ public class Member {
 		return this.name;
 	}
 
-	public String PhoneNum() {
+	public String getPhoneNum() {
 		return this.phoneNum;
 	}
 
